@@ -1,0 +1,4 @@
+mysql.username = root
+mysql.password = Ammajan@0011
+mysql.url = jdbc:mysql://localhost:3306/Student_Management?useSSL=false
+mysql.driver = com.mysql.cj.jdbc.Driver
