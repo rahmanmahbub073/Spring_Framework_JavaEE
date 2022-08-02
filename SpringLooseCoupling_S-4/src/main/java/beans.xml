@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd ">
+
+
+	<!-- for light weighting apk instead of creating two beans we can simplify 
+		it which is called ref attribute -->
+
+	<bean id="mathCheatObj"
+		class="com.example.loose.coupling.MathCheat"></bean>
+	<bean id="scienceCheatObj"
+		class="com.example.loose.coupling.ScienceCheat"></bean>
+	<bean id="JavaCheatObj"
+		class="com.example.loose.coupling.JavaCheat"></bean>
+		
+	<bean id="student" class="com.example.loose.coupling.Student">
+		<property name="cheat" ref="mathCheatObj" />
+	</bean>
+
+<!-- 	<bean id="anotherStudent"
+		class="com.example.loose.coupling.AnotherStudent">
+		<property name="cheat" ref="scienceCheatObj" />
+	</bean> -->
+	
+		<bean id="anotherStudent"
+		class="com.example.loose.coupling.AnotherStudent">
+		<property name="cheat" ref="JavaCheatObj" />
+	</bean>
+
+</beans>
