@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd ">
+
+<!-- constructor base injection beans
+<bean id = "student" class="com.practice.DependancyInjection.Student"> 
+
+<constructor-arg name="studentName" value="Md Mahbubur rahman" />
+
+//How "1" is coverting this into "int" ?? 
+//we can also use type="int"
+
+<constructor-arg name="id" value="1"/>
+
+</bean> -->
+<!--  setter based dependency injection-->
+ <bean id = "student" class="com.practice.DependancyInjection.Student"> 
+
+<property name="studentName" value="Md Mahbubur rahman" />
+<property name="id" value="1"></property>
+
+</bean>
+
+<!-- checking spring created object or not -->
+<bean id = "saima" class="com.practice.DependancyInjection.Student"> 
+
+<property name="studentName" value="Saima Madam" />
+<property name="id" value="2"></property>
+
+</bean>
+
+</beans>
